@@ -4,7 +4,7 @@ CWM do-it-all script
 ## Installation
 ```
 chmod u+x cwm
-ln -s cwm /usr/local/bin/cwm
+ln -s ~/CWM-ProgNets/scripts/cwm /usr/local/bin/cwm
 ```
 
 ## Usage

@@ -14,7 +14,7 @@ ETH="eth0"
 
 # Switch side (Raspberry Pi)
 # The directory to your P4 program
-DIR="/home/pi/cwm-prognets/assignment3"
+DIR="/home/pi/cwm-prognets/assignment3/"
 # Modify the name of P4 program here
 P4_NAME="myprog"
 # The name of the first interface on Raspberry Pi
@@ -28,6 +28,9 @@ if [ "$INPUT" = "ip" ]
 then
     sudo ip addr add dev $ETH $SRC_IP
 #Add a route    
+# via may be required
+# sudo ip route add dev $ETH $DST_IP via $SRC_IP
+# $SRC_IP without netmask 
 elif [ "$INPUT" = "route" ] 
 then
     sudo ip route add dev $ETH $DST_IP
